@@ -31,7 +31,7 @@ export class News extends Component {
             this.state.heading = "Top Headlines";
             console.log("null category");
             url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
-            console.log(url)
+     
         } else {
             let { category } = this.props;
             this.state.heading = category;
@@ -61,9 +61,9 @@ export class News extends Component {
 
                     {
 
-                        this.state.articles.map((element) => (
+                        this.state.articles?.map((element, index) => (
 
-                            <NewsItem imgUrl={element.urlToImage} title={element.title} description={element.description} author={element.author} source={element.source.name} date={element.publishedAt} newsUrl={element.url} />
+                            <NewsItem imgUrl={element.urlToImage} title={element.title} description={element.description} author={element.author} source={element.source.name} date={element.publishedAt} newsUrl={element.url} key={index} />
                         )
                         )
                     }
