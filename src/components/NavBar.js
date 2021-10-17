@@ -68,9 +68,9 @@ function NavBar(props) {
     )
 }
 
-NavBar.propTypes = {
 
-}
+
+
 
 export default NavBar
 
